@@ -1,0 +1,28 @@
+ion-split-pane{
+    
+    .custom-avatar{
+        width: 80%;
+        display: flex;
+        margin: 20px auto;
+    }
+    ion-content{
+        --background: url('../../../assets/menu.png') 100% 100%;
+    }
+    ion-list{
+        width: 74%;
+        margin: auto;
+        --ion-background-color: none;
+        --ion-item-background: none;
+        ion-item{
+            --background: none;
+            border-radius: 25px;
+            --color: var(--ion-color-light);
+            margin: 2px 0;
+        }   
+    }
+    
+    .active-item{
+        background: var(--ion-color-tertiary);
+    }
+    
+}

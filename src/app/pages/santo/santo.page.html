@@ -1,0 +1,57 @@
+<ion-header class="animated fadeInRightBig fast">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Santo do dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg">
+      <ion-grid *ngIf="!verificaTemplate" class="animated fadeInUp slower">
+          <ion-row>
+            <ion-col text-center>
+              <div class="erro">
+                  <p>
+                      Verifique sua conexão com a internet e tente novamente mais tarde
+                  </p>
+                </div>
+            </ion-col>    
+          </ion-row>
+    
+        </ion-grid>
+
+    <ion-grid *ngIf="verificaTemplate" class="animated fadeInUp slower">
+      <ion-row>
+        <ion-col text-center>
+          <h1> {{ getDay() }} <sup>/ {{ getMonth() }} </sup></h1>
+          <p>Santo do dia</p>
+        </ion-col>
+
+        <ion-col text-center>
+          <img src="../../../assets/siloe.png" alt="Siloé" width="50px">
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+          <ion-col text-center>
+            <h1>{{ santo.nome }}</h1>
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col>
+            <ion-card class="imagem" [style.background]="getBackground(santo.imagem)">
+              <div class="name">
+                <p>
+                  {{ santo.conteudo }}
+                </p>
+              </div>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

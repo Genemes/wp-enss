@@ -1,0 +1,32 @@
+<ion-header #header class="animated fadeInRightBig fast">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button
+          defaultHref="/posts"
+          text="Voltar" icon="arrow-back">
+        </ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ post.title.rendered }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content scrollEvents="true" appHideHeader [header]="header"
+  class="animated fadeInUp slower">
+
+  <div class="background-dinamico" [style.background]="getBackground()">
+      <div *ngIf="post">
+        <img [src]="post.media_url" [style.width]="'100%'">
+        <div class="image-size" [innerHTML]="post.content.rendered" padding></div>
+      </div>
+
+      <ion-footer color="secondary">
+        <ion-toolbar>
+          <ion-button expand="full" fill="clear" (click)="openOriginal()">
+            Open Original
+          </ion-button>
+        </ion-toolbar>
+      </ion-footer>
+    </div>
+ 
+</ion-content>
+ 

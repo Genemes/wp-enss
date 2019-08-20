@@ -1,0 +1,31 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+ion-content{
+    .image-size{
+        img{
+            width: 100%;
+            height: 20%
+        }
+    }
+    video{
+        width: 100%;
+        height: 20%
+    }
+
+    .background-dinamico{
+        width: 100%;
+        //height: calc(70vh - 100px);
+        //position: absolute;
+        background-size: 100% 100% !important;
+    }
+}

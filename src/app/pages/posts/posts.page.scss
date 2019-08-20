@@ -1,0 +1,26 @@
+ion-content{
+    animation-delay: 2s;
+}
+ion-button{
+    --ion-background-color: val(--ion-color-primary);
+    --ion-item-background: val(--ion-color-primary);
+}
+
+.bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100hv;
+    min-height: 100hv;
+    .erro{
+        border-radius: 20px !important;
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        p{
+            padding: 10% 15%;
+            margin: auto;
+            text-align: center;
+            color: var(--ion-color-primary)
+        }
+    }
+}
